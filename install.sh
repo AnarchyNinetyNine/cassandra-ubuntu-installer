@@ -10,7 +10,8 @@ sudo mv apache-cassandra-4.1.8 /opt/cassandra
 echo "🔧 Adding Cassandra to PATH..."
 echo "export CASSANDRA_HOME=/opt/cassandra" >> ~/.bashrc
 echo "export PATH=\$PATH:\$CASSANDRA_HOME/bin" >> ~/.bashrc
-source ~/.bashrc
+sudo snap install cqlsh
+
 
 echo "⚙️  Registering systemd service..."
 USER=$(whoami)
@@ -38,4 +39,12 @@ sudo systemctl enable cassandra
 
 source ~/.bashrc
 
-echo "✅ Installation complete! Use 'sudo systemctl start cassandra' to launch Cassandra."
+echo "⚙️  One last thing to go. run the following command.."
+echo ""
+echo "source ~/.bashrc"
+echo ""
+echo "ℹ️  To run Cassandra manually, use:"
+echo ""
+echo "    /opt/cassandra/bin/cassandra -R"
+echo ""
+echo "✅ Installation complete!"
