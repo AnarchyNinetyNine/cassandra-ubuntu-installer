@@ -67,6 +67,10 @@ Run the installation script:
 ```bash
 ./install.sh
 ```
+Uo next,run:
+```bash
+source ~/.bashrc
+```
 
 This script:
 - Downloads **Apache Cassandra 4.1.8** from the official Apache repository.
