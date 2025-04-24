@@ -94,8 +94,8 @@ Expected output: `cqlsh 5.0.1` (bundled with Cassandra 4.1.8).
 
 Cassandra is registered as a systemd service for easy management.
 
-###💡 WSL (Windows Subsystem for Linux) Users: Special Note
-If you're using **WSL1** or **WSL2**, the default **systemctl** commands for managing Cassandra won’t work, because **systemd** is not natively supported (unless manually enabled in **WSL2** with newer U>
+### 💡 WSL (Windows Subsystem for Linux) Users: Special Note
+If you're using `WSL1` or `WSL2`, the default `systemctl` commands for managing Cassandra won’t work, because `systemd` is not natively supported (unless manually enabled in `WSL2` with newer U>
 
 ### ✅ Instead of using:
 ```bash
@@ -106,14 +106,14 @@ sudo systemctl start cassandra
 /opt/cassandra/bin/cassandra -R
 ```
 
--The -R flag prevents Cassandra from daemonizing, which is more reliable in WSL environments.
+The -R flag prevents Cassandra from daemonizing, which is more reliable in WSL environments.
 - You can open a separate terminal tab and run Cassandra there, leaving it open.
 - Once running, use cqlsh in another terminal to start querying:
 ```bash
 cqlsh
 ```
 ### 🔄 Need to stop Cassandra?
-Just press **Ctrl+C** in the terminal where Cassandra is running.
+Just press `Ctrl+C` in the terminal where Cassandra is running.
 
 ### 🖥️ If You Are Working with Native Ubuntu
 If you're using a native Ubuntu installation (not WSL), you can manage Cassandra using systemd:
