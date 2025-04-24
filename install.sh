@@ -1,7 +1,5 @@
 #!/bin/bash
 
-set -e
-
 sudo apt update
 
 echo "📥 Downloading Cassandra 4.1.8..."
@@ -37,5 +35,7 @@ sudo systemctl daemon-reexec
 sudo systemctl daemon-reload
 sudo systemctl restart cassandra
 sudo systemctl enable cassandra
+
+source ~/.bashrc
 
 echo "✅ Installation complete! Use 'sudo systemctl start cassandra' to launch Cassandra."
